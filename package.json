@@ -1,6 +1,6 @@
 {
   "name": "hdlc-rfc1662",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "HDLC is a Simple NodeJS HDLC library.",
   "main": "index.js",
   "scripts": {
