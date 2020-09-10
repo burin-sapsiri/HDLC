@@ -37,8 +37,6 @@ var HDLC = /** @class */ (function () {
                     
                     this.pendingFrame.frameChecksum ^= 0xffff
                     
-                    console.log(this.pendingFrame.frameChecksum.toString(16))
-                    
                     if (this.pendingFrame.frameChecksum === ((this.pendingFrame.receivedFrameBuffer[this.pendingFrame.framePosition - 1] << 8) | (this.pendingFrame.receivedFrameBuffer[this.pendingFrame.framePosition - 2] & 0xff))) {
                         /* Call the user defined function and pass frame to it */
                         this.eventEmitter.emit("newFrame", this.pendingFrame.receivedFrameBuffer.slice(0, this.pendingFrame.receivedFrameBuffer.length - 2));
