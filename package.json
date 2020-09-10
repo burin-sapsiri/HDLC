@@ -1,6 +1,6 @@
 {
-  "name": "hdlc",
-  "version": "1.0.5",
+  "name": "hdlc-rfc1662",
+  "version": "1.0.0",
   "description": "HDLC is a Simple NodeJS HDLC library.",
   "main": "index.js",
   "scripts": {
@@ -9,18 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elkrem/HDLC.git"
+    "url": "https://github.com/burin-sapsiri/HDLC"
   },
   "keywords": [
     "HDLC",
     "nodejs"
   ],
-  "author": "Shady Amir",
+  "author": "Burin Sapsiri",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SaW-/hdlc/issues"
+    "url": "https://github.com/burin-sapsiri/HDLC"
   },
-  "homepage": "https://github.com/SaW-/hdlc#readme",
+  "homepage": "https://github.com/burin-sapsiri/HDLC",
   "dependencies": {
     "crc": "^3.8.0"
   },
