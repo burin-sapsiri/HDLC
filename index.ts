@@ -29,7 +29,6 @@ class HDLC {
         for (var i = 0; i < bytes.length; i++) {
             /* FRAME FLAG */
             var data = bytes[i];
-            console.log(data)
             /* FRAME FLAG */
             if (data === FRAME_BOUNDARY_OCTET) {
                 if (this.pendingFrame.escapeCharacter === true) {
