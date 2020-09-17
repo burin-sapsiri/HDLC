@@ -99,6 +99,12 @@ var HDLC = /** @class */ (function () {
         this.sendchar(byte);
         this.sendchar(FRAME_BOUNDARY_OCTET);
     };
+    HDLC.prototype.clear = function () {
+        this.pendingFrame.framePosition = 0;
+        this.pendingFrame.frameChecksum = 0xffff;
+        this.pendingFrame.escapeCharacter = false;
+        this.pendingFrame.receivedFrameBuffer = [];
+    }
     return HDLC;
 }());
 exports.HDLC = HDLC;
