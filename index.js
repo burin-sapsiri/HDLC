@@ -85,13 +85,13 @@ var HDLC = /** @class */ (function () {
 
         fcs ^= 0xffff
 
-        byte = Buffer.from([fcs]).readInt8(0);
+        byte = fcs & 0x00ff;
         if ((byte === CONTROL_ESCAPE_OCTET) || (byte === FRAME_BOUNDARY_OCTET)) {
             this.sendchar(CONTROL_ESCAPE_OCTET);
             byte ^= INVERT_OCTET;
         }
         this.sendchar(byte);
-        byte = Buffer.from([fcs >> 8]).readInt8(0);
+        byte = (fcs & 0xff00) >> 8;
         if ((byte === CONTROL_ESCAPE_OCTET) || (byte === FRAME_BOUNDARY_OCTET)) {
             this.sendchar(CONTROL_ESCAPE_OCTET);
             byte ^= INVERT_OCTET;
